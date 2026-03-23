@@ -6,19 +6,19 @@ A PowerShell script that automatically detects HP machines and installs the appr
 
 * Automatically detects HP devices.
 * Installs drivers silently and efficiently.
-* Requires **HPImageAssistant.exe** in the same folder.
+* Requires **HPImageAssistant.exe** in a subfolder.
 * Simple to launch via a batch file with administrative privileges.
 
 ## Requirements
 
 * Windows PC manufactured by **HP**.
-* **HP Image Assistant (HPImageAssistant.exe)** placed in the same folder as the script.
+* **HPImageAssistant.exe** placed in a subfolder under the script folder.
 * Administrative privileges to run the script.
 * PowerShell execution policy allowing script execution (the provided batch file handles this automatically).
 
 ## Usage
 
-1. Place `HPImageAssistant.exe` in a folder along with `HP-Driver-Installer.ps1`.
+1. Place `HP-Driver-Installer.ps1` in a folder and ensure `HPImageAssistant.exe` is in a subfolder of this folder.
 2. Run the provided batch file (`RunInstaller.bat`) which will:
 
    * Check for administrative privileges.
@@ -26,7 +26,7 @@ A PowerShell script that automatically detects HP machines and installs the appr
    * Launch the PowerShell script.
 3. The script will detect if the device is an HP machine and begin installing drivers.
 
-> ⚠️ **Note:** This script only works on HP devices. Running it on non-HP hardware will exit the script safely.
+> ⚠️ **Note:** This script only works on HP devices.
 
 ## Batch File Example
 
@@ -51,5 +51,9 @@ pause
 ## How It Works
 
 1. Detects whether the current device is an HP machine.
-2. Calls `HPImageAssistant.exe` to scan and install all necessary drivers.
+2. Calls `HPImageAssistant.exe` from the subfolder to scan and install all necessary drivers.
 3. Provides automated driver installation without manual intervention.
+
+## License
+
+This project is licensed under the MIT License.
