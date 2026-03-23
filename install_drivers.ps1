@@ -1,9 +1,10 @@
 # ================================
 # HP Driver Installer
 # ================================
-$HPIA = Join-Path $PSScriptRoot "HPIA\HPImageAssistant.exe"
-$Drivers = Join-Path $PSScriptRoot "HPIA\Drivers"
-$ReportPath = Join-Path $PSScriptRoot "HPIA\Reports"
+# TODO: Configure these paths for your environment
+$HPIA = "C:\path\to\HPImageAssistant.exe"  # Update this to your HPIA executable path
+$Drivers = "C:\path\to\Drivers"            # Update this to your Drivers folder path
+$ReportPath = "C:\path\to\Reports"         # Update this to your Reports folder path
 
 Write-Host "Testing Path..."
 if(-Not (Test-Path $HPIA)) {
