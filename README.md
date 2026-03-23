@@ -44,7 +44,7 @@ if %errorLevel% neq 0 (
 powershell -Command "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass"
 
 :: Run the installer
-powershell -File "HP-Driver-Installer.ps1"
+powershell -File "install_drivers.ps1"
 pause
 ```
 
